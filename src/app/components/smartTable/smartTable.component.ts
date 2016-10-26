@@ -55,12 +55,12 @@ export class SmartTable implements AfterViewInit {
   constructor(private backend: ApiRequester, private fieldGetter: ObjFieldsProvider) { }
 
   ngAfterViewInit() {
-    if (typeof this.gridSel == 'object' && typeof this.gridSel.nativeElement == 'object' && typeof this.gridSel.nativeElement.then == 'function') {
+    //if (typeof this.gridSel == 'object' && typeof this.gridSel.nativeElement == 'object' && typeof this.gridSel.nativeElement.then == 'function') {
       this.gridSel.nativeElement.then(() => {
-        console.log('YESSS')//todo perchè non entri?????
+          console.log("Fuck yeah"); //todo perchè non entri?????
         this.onGridReady(this.gridSel.nativeElement);
       });
-    }
+    //}
     console.log(typeof this.gridSel.nativeElement.then)
     this.loadingSpinner = this.loadingSpinnerSel.nativeElement;
     this.updateTable(this.page, this.pageSizeIndex, this.sortOrder, this.sort);

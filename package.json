@@ -7,7 +7,7 @@
     "build": "ng build",
     "start": "ng serve --proxy-config proxy.conf.json",
     "lint": "tslint \"src/**/*.ts\"",
-    "test": "ng test --watch=false",
+    "test": "ng test",
     "test-debug": "ng test",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor"

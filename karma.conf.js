@@ -11,9 +11,18 @@ module.exports = function (config) {
       require('karma-remap-istanbul'),
       require('angular-cli/plugins/karma')
     ],
+    exclude: [
+        './dist/assets/bower_components/web-animations-js/web-animations-next-lite.min.js',
+        'dist/assets/bower_components/webcomponentsjs/ShadowDOM.min.js',
+        './dist/assets/bower_components/*/gulpfile.js',
+        './dist/assets/bower_components/demo/*.html',
+        './dist/assets/bower_components/test/*.html',
+    ],
     files: [
-      './dist/assets/bower_components/webcomponentsjs/webcomponents-lite.min.js',
-      { pattern: './dist/assets/bower_components/polymer/polymer.html', included: true, watched:false},
+    './dist/assets/bower_components/webcomponentsjs/webcomponents-lite.min.js',
+      './dist/assets/bower_components/*/*.js',
+      { pattern: './dist/assets/bower_components/**/*.html', included: true, watched:false},
+      /*{ pattern: './dist/assets/bower_components/polymer/polymer.html', included: true, watched:false},
       { pattern: './dist/assets/bower_components/vaadin-grid/vaadin-grid.html', included: true, watched:false},
       { pattern: './dist/assets/bower_components/gold-email-input/gold-email-input.html', included: true, watched:false},
       { pattern: './dist/assets/bower_components/paper-input/paper-input.html', included: true, watched:false},
@@ -24,7 +33,7 @@ module.exports = function (config) {
       { pattern: './dist/assets/bower_components/paper-item/paper-item.html', included: true, watched:false},
       { pattern: './dist/assets/bower_components/paper-listbox/paper-listbox.html', included: true, watched:false},
       { pattern: './dist/assets/bower_components/paper-spinner/paper-spinner-lite.html', included: true, watched:false},
-      { pattern: './src/test.ts', watched: false }
+      */{ pattern: './src/test.ts', watched: false }
     ],
     preprocessors: {
       './src/test.ts': ['angular-cli']
@@ -45,7 +54,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],// PhantomJS OR Chrome
-    singleRun: false,
-    browserNoActivityTimeout:15000
+    singleRun: true,
+    browserNoActivityTimeout:20000
   });
 };

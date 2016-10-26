@@ -36,16 +36,7 @@ describe('SmartTable', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(SmartTable);
     component = fixture.componentInstance;
-
-        /*try {
-          PolymerElement('vaadin-grid');
-        } catch (error) {
-          expect(error.message).toContain('element "non-registered" has not been registered');
-      }*/
-
     fixture.detectChanges();
-    console.log("problems2");
-
   });
 
   it('should create', () => {
