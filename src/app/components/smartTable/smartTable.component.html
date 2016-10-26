@@ -1,0 +1,41 @@
+<div class="smart-table-container">
+    <vaadin-grid #grid>
+        <table>
+            <colgroup>
+              <col *ngFor="let cell of table">
+            </colgroup>
+          <thead>
+            <tr>
+              <th *ngFor="let cell of table">{{cell.title}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of people">
+              <td *ngFor="let cell2 of table">{{getField(user,cell2.path)}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </vaadin-grid>
+
+    <div class="paper-spinner-lite" #loadingSpinner>
+        <paper-spinner-lite active></paper-spinner-lite>
+    </div>
+</div>
+
+<div class="tablePref">
+    <div class="show-rows">
+        <paper-dropdown-menu label="Show rows">
+          <paper-listbox class="dropdown-content" (iron-select)="onShowPageChange($event)" selected="{{pageSizeIndex}}">
+            <paper-item *ngFor="let pageSize of pageSizes; let i = index" value="{{i}}">{{pageSize}}</paper-item>
+          </paper-listbox>
+        </paper-dropdown-menu>
+    </div>
+    <div class="pagination">
+        <a class="firstPage" *ngIf="page!=1"  (click)="onPaginationDoubleLeft(pageInput)"><iron-icon icon="vaadin-icons:angle-double-left"></iron-icon></a>
+        <a class="backPage" *ngIf="page!=1" (click)="onPaginationLeft(pageInput)"><iron-icon icon="vaadin-icons:angle-left"></iron-icon></a>
+        <paper-input class="pageCountInput" label="Page" #pageInput (keyup.enter)="onInsertPage(pageInput)" allowed-pattern="\d+" error-message="Numbers only!" auto-validate [value]="page"><div suffix>/{{maxPage}}</div></paper-input>
+        <a class="nextPage" *ngIf="page!=maxPage" (click)="onPaginationRight(pageInput)"><iron-icon icon="vaadin-icons:angle-right"></iron-icon></a>
+        <a class="lastPage" *ngIf="page!=maxPage" (click)="onPaginationDoubleRight(pageInput)"><iron-icon icon="vaadin-icons:angle-double-right"></iron-icon></a>
+    </div>
+    <div style="clear:both;"></div>
+</div>

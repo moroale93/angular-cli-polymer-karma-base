@@ -1,0 +1,13 @@
+Per aggiungere un componente polymer:
+    0) aggiungere al file bower.json la dipendenza ed installarla con il comando 'bower i'
+    1) aggiungere l'import nel file src/index.html
+    2) aggiungere la dipendenza nel file src/app/listOfComponents.ts
+
+
+
+comandi:
+    - Start con proxy: npm start
+    - Start senza proxy: ng serve
+    - Build: npm run build
+    - Unit testing: npm run test
+    - Unit testing debug: npm run test-debug

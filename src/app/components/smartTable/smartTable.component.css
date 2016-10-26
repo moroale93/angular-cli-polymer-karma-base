@@ -1,0 +1,47 @@
+vaadin-grid.x-scope.vaadin-grid-0 {
+    height: 500px;
+    /* overflow: scroll; */
+}
+
+div.pagination{
+    margin: 0 auto;
+    max-width: 400px;
+    top: -5px;
+    position: relative;
+    text-align: center;
+}
+
+div.show-rows{
+    float: right;
+    max-width: 60px;
+}
+
+div.pagination a{
+    cursor: pointer;
+}
+
+tbody.loadingBody td.loadingCell{
+    margin: 0 auto;
+    display: block;
+    background: transparent;
+    border: none;
+}
+
+div.smart-table-container{
+    position: relative;
+}
+
+div.paper-spinner-lite{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 0px;
+    height: 0px;
+}
+
+div.paper-spinner-lite.hidden-spinner{
+    display: none;
+}

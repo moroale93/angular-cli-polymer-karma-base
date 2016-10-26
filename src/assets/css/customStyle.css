@@ -1,0 +1,9 @@
+/*page changer style*/
+div.pagination paper-input.pageCountInput paper-input-container.paper-input {
+    max-width: 80px;
+    display: inline-block;
+    position: relative;
+    bottom: -5px;
+}
+
+/**/

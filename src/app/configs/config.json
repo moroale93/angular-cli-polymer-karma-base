@@ -1,0 +1,9 @@
+{
+    "urls":{
+        "listOfPeople":"/vts-ed-rest-api/profiles",
+        "person":"/vts-ed-rest-api/profiles/$PERSONID"
+    },
+    "portal":{
+        "home":"http://localhost:3000"
+    }
+}

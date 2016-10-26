@@ -1,0 +1,33 @@
+{
+    "name": "colmar",
+    "description": "colmar",
+    "main": "",
+    "authors": [
+        "moroale93 <moro.ale.93@gmail.com>"
+    ],
+    "license": "MIT",
+    "moduleType": [
+        "es6"
+    ],
+    "homepage": "",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "polymer": "Polymer/polymer#^1.6.1",
+        "vaadin-grid": "Vaadin/vaadin-grid#^1.1.1",
+        "paper-input": "PolymerElements/paper-input",
+        "gold-email-input": "PolymerElements/gold-email-input",
+        "paper-button": "PolymerElements/paper-button",
+        "paper-dialog": "PolymerElements/paper-dialog",
+        "vaadin-icons": "Vaadin/vaadin-icons",
+        "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu",
+        "paper-item":"PolymerElements/paper-item",
+        "paper-listbox":"PolymerElements/paper-listbox",
+        "paper-spinner":"PolymerElements/paper-spinner"
+    }
+}

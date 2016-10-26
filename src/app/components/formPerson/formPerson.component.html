@@ -1,0 +1,14 @@
+<form>
+  <paper-input required label="Name" pattern="[a-zA-Z]*" error-message="letters only!" #name></paper-input>
+  <paper-input required pattern="[a-zA-Z]*" error-message="letters only!" label="Surname" #surname></paper-input>
+  <gold-email-input required label="Your email address" #email></gold-email-input>
+  <paper-button raised (click)="onSubmitClick(name, surname, email, dialog)">Submit</paper-button>
+</form>
+
+<paper-dialog #dialog>
+  <h2>Error</h2>
+  <p>Errors in the form!</p>
+  <div class="buttons">
+    <paper-button dialog-confirm autofocus>Ok</paper-button>
+  </div>
+</paper-dialog>

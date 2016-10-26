@@ -1,0 +1,6 @@
+<h1>
+  {{title}}
+</h1>
+<form-person (onSubmit)="addNewPersonToTable($event)"></form-person>
+<smart-table [people]="listOfPeople" (onSelect)="tableRowSelect($event)"></smart-table>
+<router-outlet></router-outlet>
