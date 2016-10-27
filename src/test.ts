@@ -21,7 +21,6 @@ var webcomponentsready = new Promise(function(resolve, reject) {
 });
 
 webcomponentsready.then(function() {
-    console.log("----------------------WebComponentsReady----------------------")
   Promise.all([
     System.import('@angular/core/testing'),
     System.import('@angular/platform-browser-dynamic/testing')

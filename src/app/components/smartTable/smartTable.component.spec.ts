@@ -15,16 +15,16 @@ describe('SmartTable', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [SmartTable,
-          PolymerElement('vaadin-grid'),
-          PolymerElement('paper-input'),
-          PolymerElement('gold-email-input'),
-          PolymerElement('paper-button'),
-          PolymerElement('paper-dialog'),
-          PolymerElement('iron-icon'),
-          PolymerElement('paper-dropdown-menu'),
-          PolymerElement('paper-item'),
-          PolymerElement('paper-listbox'),
-          PolymerElement('paper-spinner-lite')],
+        PolymerElement('vaadin-grid'),
+        PolymerElement('paper-input'),
+        PolymerElement('gold-email-input'),
+        PolymerElement('paper-button'),
+        PolymerElement('paper-dialog'),
+        PolymerElement('iron-icon'),
+        PolymerElement('paper-dropdown-menu'),
+        PolymerElement('paper-item'),
+        PolymerElement('paper-listbox'),
+        PolymerElement('paper-spinner-lite')],
       providers: [
         { provide: ApiRequester, useClass: ApiRequesterStub },
         ObjFieldsProvider

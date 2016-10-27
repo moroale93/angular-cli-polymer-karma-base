@@ -1,39 +1,35 @@
 // Karma configuration file, see link for more information
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
-module.exports = function (config) {
+/* thanks to:
+    https://github.com/vaadin/angular2-polymer/issues/23 
+    https://github.com/harshabonthu/angular2-polymer-integration/blob/master/config/karma.conf.js
+*/
+module.exports = function(config) {
   config.set({
     basePath: '',
     frameworks: ['jasmine', 'angular-cli'],
     plugins: [
       require('karma-jasmine'),
-      require('karma-chrome-launcher'),// karma-phantomjs-launcher OR karma-chrome-launcher
+      require('karma-chrome-launcher'), // karma-phantomjs-launcher OR karma-chrome-launcher
       require('karma-remap-istanbul'),
       require('angular-cli/plugins/karma')
     ],
-    exclude: [
-        './dist/assets/bower_components/web-animations-js/web-animations-next-lite.min.js',
-        'dist/assets/bower_components/webcomponentsjs/ShadowDOM.min.js',
-        './dist/assets/bower_components/*/gulpfile.js',
-        './dist/assets/bower_components/demo/*.html',
-        './dist/assets/bower_components/test/*.html',
-    ],
-    files: [
-    './dist/assets/bower_components/webcomponentsjs/webcomponents-lite.min.js',
-      './dist/assets/bower_components/*/*.js',
-      { pattern: './dist/assets/bower_components/**/*.html', included: true, watched:false},
-      /*{ pattern: './dist/assets/bower_components/polymer/polymer.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/vaadin-grid/vaadin-grid.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/gold-email-input/gold-email-input.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-input/paper-input.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-button/paper-button.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-dialog/paper-dialog.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/vaadin-icons/vaadin-icons.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-dropdown-menu/paper-dropdown-menu.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-item/paper-item.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-listbox/paper-listbox.html', included: true, watched:false},
-      { pattern: './dist/assets/bower_components/paper-spinner/paper-spinner-lite.html', included: true, watched:false},
-      */{ pattern: './src/test.ts', watched: false }
+    files: [{
+        pattern: './src/test.ts',
+        included: true,
+        watched: false
+      },
+      // Load polymer polyfill. You can safe remove it if you only test in Chrome.
+      'dist/assets/bower_components/webcomponentsjs/webcomponents-lite.js',
+      // Load polymer imports
+      'dist/polymer-elements.html',
+      // Distribution folder.
+      {
+        pattern: 'dist/**/*',
+        included: false,
+        watched: true
+      },
     ],
     preprocessors: {
       './src/test.ts': ['angular-cli']
@@ -53,8 +49,8 @@ module.exports = function (config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ['Chrome'],// PhantomJS OR Chrome
-    singleRun: true,
-    browserNoActivityTimeout:20000
+    browsers: ['Chrome'], // PhantomJS OR Chrome
+    singleRun: false,
+    browserNoActivityTimeout: 20000
   });
 };
