@@ -11,6 +11,7 @@ import { PolymerElement } from '@vaadin/angular2-polymer';
 describe('SmartTable', () => {
   let component: SmartTable;
   let fixture: ComponentFixture<SmartTable>;
+  let spy:any;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -42,4 +43,5 @@ describe('SmartTable', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });

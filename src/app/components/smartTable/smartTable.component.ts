@@ -1,4 +1,4 @@
-import {Component, Input, AfterViewInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
+import {Component, Input, OnInit, AfterViewInit, Output, EventEmitter, ViewChild, ElementRef} from '@angular/core';
 import 'rxjs/add/operator/map';
 import { ApiRequester } from '../../services/apiRequester.service';
 import { ObjFieldsProvider } from '../../services/objFieldsProvider.service';
@@ -12,10 +12,10 @@ import { ListResponse } from '../../models/listResponse';
   // non agiungo il provider dell'api requester perchè è già presente nella nostra provider hierarchy (presente in app.component)
 })
 
-export class SmartTable implements AfterViewInit {
+export class SmartTable implements AfterViewInit, OnInit {
   @ViewChild('grid') gridSel: ElementRef;
   @ViewChild('loadingSpinner') loadingSpinnerSel: ElementRef;
-  @Input() people: Person[] = [];
+  // @Input() people: Person[] = [];
   @Output() onSelect = new EventEmitter();
 
   public grid;
@@ -27,6 +27,7 @@ export class SmartTable implements AfterViewInit {
   public sort: string = null;
   public maxPage: number;
   public isLoading: boolean = true;
+  public people: Person[] = [];
   public table = [
     {
       title: 'First Name',
@@ -50,16 +51,19 @@ export class SmartTable implements AfterViewInit {
         sortable: true
       }
     }
-  ];
+];
 
   constructor(private backend: ApiRequester, private fieldGetter: ObjFieldsProvider) { }
+
+  ngOnInit(){
+      this.loadingSpinner = this.loadingSpinnerSel.nativeElement;
+      this.updateTable(this.page, this.pageSizeIndex, this.sortOrder, this.sort);
+  }
 
   ngAfterViewInit() {
     this.gridSel.nativeElement.then(() => {
       this.onGridReady(this.gridSel.nativeElement);
     });
-    this.loadingSpinner = this.loadingSpinnerSel.nativeElement;
-    this.updateTable(this.page, this.pageSizeIndex, this.sortOrder, this.sort);
   }
 
   updateTable(page, pageSizeIndex, sortOrder, sort) {

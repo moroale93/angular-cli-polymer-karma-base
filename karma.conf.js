@@ -2,7 +2,7 @@
 // https://karma-runner.github.io/0.13/config/configuration-file.html
 
 /* thanks to:
-    https://github.com/vaadin/angular2-polymer/issues/23 
+    https://github.com/vaadin/angular2-polymer/issues/23
     https://github.com/harshabonthu/angular2-polymer-integration/blob/master/config/karma.conf.js
 */
 module.exports = function(config) {
@@ -50,7 +50,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'], // PhantomJS OR Chrome
-    singleRun: false,
+    singleRun: true,
     browserNoActivityTimeout: 20000
   });
 };
