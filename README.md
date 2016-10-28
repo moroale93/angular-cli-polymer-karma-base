@@ -3,16 +3,10 @@
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.18.
 
 ## Install dependencies
-
-`npm install`
-`bower install`
+Run `npm install` & `bower install` to install dependencies.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class`.
 
 ## Build
 
@@ -22,15 +16,21 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## note aggiuntive sui vari files:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### .bowerecc
 
-## Deploying to Github Pages
+Questo file indica il path in cui mettere le dipendenze scaricate con bower (i polymer elements).
+questi vengono messi nella cartella assets ovvero la cartella che verrà inclusa poi nella build.
 
-Run `ng github-pages:deploy` to deploy to Github Pages.
+### angular-cli.json
 
-## Further help
+qui risiedono le varie configurazioni del progetto. Come la selezione dei file da includere nella build sotto la cartella assets, la selezione della cartella dove si trova l'app, dove mettere la build, il main da eseguire all'avvio ("main-polymer.ts" per attendere il caricamento dei polymer elements),etc...
 
-To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### proxy.conf.json
+
+Questo file contiene i vari path con relativi target da proxare per evitare problemi di CORS.
+
+### tslint.json
+
+Contiene le 'norme' per lo stile del codice. Se il codice non segue queste linee guida all'esecuzione dei test verrà mostrato un warning.

@@ -7,6 +7,7 @@ import { ObjFieldsProvider } from '../../services/objFieldsProvider.service';
 import { SmartTable } from './smartTable.component';
 import { By } from '@angular/platform-browser';
 import { PolymerElement } from '@vaadin/angular2-polymer';
+import { listOfComponents } from '../../listOfComponents';
 
 describe('SmartTable', () => {
   let component: SmartTable;
@@ -15,17 +16,7 @@ describe('SmartTable', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SmartTable,
-        PolymerElement('vaadin-grid'),
-        PolymerElement('paper-input'),
-        PolymerElement('gold-email-input'),
-        PolymerElement('paper-button'),
-        PolymerElement('paper-dialog'),
-        PolymerElement('iron-icon'),
-        PolymerElement('paper-dropdown-menu'),
-        PolymerElement('paper-item'),
-        PolymerElement('paper-listbox'),
-        PolymerElement('paper-spinner-lite')],
+      declarations: listOfComponents,
       providers: [
         { provide: ApiRequester, useClass: ApiRequesterStub },
         ObjFieldsProvider
@@ -43,5 +34,4 @@ describe('SmartTable', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
 });

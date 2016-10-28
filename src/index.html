@@ -3,15 +3,28 @@
 <head>
     <meta charset="utf-8">
     <title>Colmar</title>
+    <!-- viene selezionata la base per le route di angular -->
     <base href="/">
+    <!-- in questo file saranno inclusi gli stili per customizzare gli elementi di polymer.
+        questi stili dovranno essere aggiunti qui e non negli stili dei vari componenti
+         altrimenti non saranno visualizzati.
+         NB: gli stili inclusi nei vari componenti vengono applicati solamente al suo template
+         e non in profondità. (COOL FEATURE!).
+    -->
     <link rel="stylesheet" href="./assets/css/customStyle.css">
+    <!-- qui vengono inclusi i polyfill component per il funzionamento su altri browser -->
     <script src="./assets/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-    <!-- Polymer Elements-->
+    <!-- qui vengono inclusi i vari Polymer Elements per la registrazione -->
     <link rel="import" href="./polymer-elements.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
+    <!-- viene messa l'applicazione angular
+        il contenuto di questo tag è visibile solamente durante il caricamento dell'applicazione
+        poi verrà rimpiazzato con il template dell'applicazione e dei vari componenti.
+        mentre quello che è esterno rimane prima e dopo.
+    -->
     <app-root>Loading...</app-root>
 </body>
 </html>

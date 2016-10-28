@@ -1,7 +1,7 @@
 Per aggiungere un componente polymer:
     0) aggiungere al file bower.json la dipendenza ed installarla con il comando 'bower i'
-    1) aggiungere l'import nel file src/index.html
-    2) aggiungere la dipendenza nel file src/app/listOfComponents.ts
+    1) aggiungere l'import nel file src/polymer-elements.html
+    2) aggiungere la dipendenza e la registrazione nel file src/app/listOfComponents.ts
 
 
 

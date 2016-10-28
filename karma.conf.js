@@ -15,7 +15,20 @@ module.exports = function(config) {
       require('karma-remap-istanbul'),
       require('angular-cli/plugins/karma')
     ],
-    files: [{
+    files: [
+        /*
+            per permettere la corretta inizializzazione dei test è necessario includere tutti
+            i file necessari! a tal proposito sono stati aggiunti successivamente(in ordine):
+            1) la configurazione di avviamento dei test;
+            2) i polyfill per i vari browser su cui verranno eseguiti i testi (possiamo rimuoverlo
+                ma non è escluso che utilizzeremo PhantomJS come in vts...bisogna vedere come si
+                cmporta Jenkins)
+            3) è stato incluso il file html con tutti gli include dei polymer elements...questo permette
+                la registrazione di questi. Il file è lo stesso che viene incluso nell'index.html
+                e quindi è sufficiente modificare quello per riversare la cosa nell'app, nella build e nei test
+            4) aggiunti (non inclusi) i vari file della build...per testarla appunto
+        */
+      {
         pattern: './src/test.ts',
         included: true,
         watched: false

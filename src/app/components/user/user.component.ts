@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import 'rxjs/add/operator/map';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ApiRequester } from '../../services/apiRequester.service';
+import { HighlightDirective } from '../../directives/attribute/myHighlight.directive';
+import { HideContentDirective } from '../../directives/structural/myHideContent.directive';
 
 @Component({
   selector: 'user',
@@ -11,6 +13,10 @@ import { ApiRequester } from '../../services/apiRequester.service';
 
 export class User implements OnInit {
   private user;
+  color:string="blue";
+  color2:string="yellow";
+  color3:string="red";
+
   constructor(private route: ActivatedRoute, private backend: ApiRequester) { }
 
   ngOnInit(): void {

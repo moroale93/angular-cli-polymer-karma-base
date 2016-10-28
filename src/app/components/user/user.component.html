@@ -1,3 +1,10 @@
-{{user?user.firstName: ''}} <br/>
-{{user?user.lastName: ''}} <br/>
-{{user?user.email: ''}} 
+<p [myHighlight]="color">{{user?user.firstName: ''}}</p>
+<p [myHighlight]="color2">{{user?user.lastName: ''}}</p>
+<p [myHighlight]="color3">{{user?user.email: ''}}</p>
+
+<input #checkbox1 type="checkbox" (change)="check = checkbox1.checked"/>
+
+
+<p *myHideContent="check">
+  HELLO!
+</p>

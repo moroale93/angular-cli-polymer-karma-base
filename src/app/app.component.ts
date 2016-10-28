@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { SmartTable } from './components/smartTable/smartTable.component';
-import { FormPerson } from './components/formPerson/formPerson.component';
+//import { SmartTable } from './components/smartTable/smartTable.component';
+//import { FormPerson } from './components/formPerson/formPerson.component';
 import { Router } from '@angular/router';
 import { ApiRequester } from './services/apiRequester.service';
 import { ConfigProvider } from './services/config.service';
