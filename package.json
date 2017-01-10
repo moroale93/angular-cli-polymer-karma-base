@@ -15,6 +15,7 @@
     },
     "private": true,
     "dependencies": {
+        "angular-cli": "1.0.0-beta.18",
         "@angular/common": "~2.1.0",
         "@angular/compiler": "~2.1.0",
         "@angular/core": "~2.1.0",
@@ -33,7 +34,6 @@
     "devDependencies": {
         "@types/jasmine": "^2.2.30",
         "@types/node": "^6.0.42",
-        "angular-cli": "1.0.0-beta.18",
         "codelyzer": "1.0.0-beta.1",
         "jasmine-core": "2.4.1",
         "jasmine-spec-reporter": "2.5.0",
