@@ -4,7 +4,6 @@
     "license": "MIT",
     "angular-cli": {},
     "scripts": {
-        "build": "ng build",
         "start-local": "ng serve --proxy-config proxy.conf.json",
         "start": "node server.js",
         "lint": "tslint \"src/**/*.ts\"",
