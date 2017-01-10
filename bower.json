@@ -18,7 +18,7 @@
         "tests"
     ],
     "dependencies": {
-        "polymer": "Polymer/polymer#^1.6.1",
+        "polymer": "Polymer/polymer#^1.7.1",
         "vaadin-grid": "Vaadin/vaadin-grid#^1.1.1",
         "paper-input": "PolymerElements/paper-input",
         "gold-email-input": "PolymerElements/gold-email-input",
@@ -26,8 +26,8 @@
         "paper-dialog": "PolymerElements/paper-dialog",
         "vaadin-icons": "Vaadin/vaadin-icons",
         "paper-dropdown-menu": "PolymerElements/paper-dropdown-menu",
-        "paper-item":"PolymerElements/paper-item",
-        "paper-listbox":"PolymerElements/paper-listbox",
-        "paper-spinner":"PolymerElements/paper-spinner"
+        "paper-item": "PolymerElements/paper-item",
+        "paper-listbox": "PolymerElements/paper-listbox",
+        "paper-spinner": "PolymerElements/paper-spinner"
     }
 }

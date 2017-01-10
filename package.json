@@ -17,8 +17,8 @@
     "dependencies": {
         "angular-cli": "1.0.0-beta.18",
         "@angular/common": "~2.1.0",
-        "@angular/compiler": "~2.1.0",
-        "@angular/core": "~2.1.0",
+        "@angular/compiler": "~2.1.2",
+        "@angular/core": "~2.1.2",
         "@angular/forms": "~2.1.0",
         "@angular/http": "~2.1.0",
         "@angular/platform-browser": "~2.1.0",
@@ -30,9 +30,7 @@
         "rxjs": "5.0.0-beta.12",
         "ts-helpers": "^1.1.1",
         "zone.js": "^0.6.23",
-        "express": "^4.14.0"
-    },
-    "devDependencies": {
+        "express": "^4.14.0",
         "@types/jasmine": "^2.2.30",
         "@types/node": "^6.0.42",
         "codelyzer": "1.0.0-beta.1",
@@ -47,6 +45,7 @@
         "protractor": "4.0.9",
         "ts-node": "1.2.1",
         "tslint": "3.13.0",
-        "typescript": "~2.0.3"
-    }
+        "typescript": "2.0.10"
+    },
+    "devDependencies": {}
 }
